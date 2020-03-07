@@ -1,0 +1,175 @@
+/events:
+  post:
+    tags:
+      - Event
+    description: Create event
+    produces:
+      - application/json
+    parameters:
+      - name: title
+        description: title
+        in: json
+        required: true
+        type: string
+      - name: description
+        description: description
+        in: json
+        required: true
+        type: string
+      - name: cover_url
+        description: cover_url
+        in: json
+        required: true
+        type: string
+      - name: location
+        description: location
+        in: json
+        required: true
+        type: string
+      - name: date
+        description: date
+        in: json
+        required: true
+        type: datetime
+      - name: tickets_url
+        description: tickets_url
+        in: json
+        required: true
+        type: string
+    responses:
+      200:
+        description: Created
+        schema:
+          $ref: "#/definitions/Event"
+      400:
+        description: Invalid input
+      500:
+        description: Internal error
+  get:
+    tags:
+      - Event
+    description: List all events
+    produces:
+      - application/json
+    parameters:
+      - name: page
+        description: Page offset
+        in: query
+        type: integer
+      - name: perPage
+        description: Items per page
+        in: query
+        type: integer
+      - name: sort
+        description: Field to sort list
+        in: query
+        type: string
+      - name: order
+        description: Order (ASC | DESC)
+        in: query
+        type: string
+    responses:
+      200:
+        description: Created
+        schema:
+          $ref: "#/definitions/EventItems"
+      400:
+        description: Invalid input
+      500:
+        description: Internal error
+/events/{event_id}:
+  get:
+    tags:
+      - Event
+    description: Get event info
+    produces:
+      - application/json
+    parameters:
+      - name: event_id
+        in: path
+        description: ID of Event
+        required: true
+        type: integer
+    responses:
+      200:
+        description: Created
+        schema:
+          $ref: "#/definitions/Event"
+      400:
+        description: Invalid input
+      500:
+        description: Internal error
+  put:
+    tags:
+      - Event
+    description: Update event info
+    produces:
+      - application/json
+    parameters:
+      - name: event_id
+        in: path
+        description: ID of Event
+        required: true
+        type: integer 
+      - name: title
+        description: title
+        in: json
+        required: true
+        type: string
+      - name: description
+        description: description
+        in: json
+        required: true
+        type: string
+      - name: cover_url
+        description: cover_url
+        in: json
+        required: true
+        type: string
+      - name: location
+        description: location
+        in: json
+        required: true
+        type: string
+      - name: date
+        description: date
+        in: json
+        required: true
+        type: datetime
+      - name: tickets_url
+        description: tickets_url
+        in: json
+        required: true
+        type: string
+    responses:
+      200:
+        description: Created
+        schema:
+          $ref: "#/definitions/Event"
+      400:
+        description: Invalid input
+      500:
+        description: Internal error
+  delete:
+    tags:
+      - Event
+    description: Update event info
+    produces:
+      - application/json
+    parameters:
+      - name: event_id
+        in: path
+        description: ID of Event
+        required: true
+        type: integer
+    responses:
+      204:
+        description: Deleted
+      400:
+        description: Invalid input
+      401:
+        description: Unauthorized
+      403:
+        description: Forbidden
+      500:
+        description: Internal error

@@ -1,0 +1,44 @@
+definitions:
+  Event:
+    type: object
+    properties:
+      id:
+        type: integer
+      title:
+        type: string
+      description:
+        type: string
+      cover_url:
+        type: string
+      location:
+        type: string
+      date:
+        type: datetime
+      tickets_url:
+        type: string
+      created_at:
+        type: string
+      updated_at:
+        type: string
+    required:
+      - title
+      - description
+      - cover_url
+      - location
+      - date
+      - tickets_url
+  EventItems:
+    type: object
+    properties:
+      total:
+        type: integer
+      perPage:
+        type: integer
+      page:
+        type: integer
+      lastPage:
+        type: integer
+      data:
+        type: array
+        items:
+          $ref: "#/definitions/Event"

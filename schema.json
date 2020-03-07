@@ -1,0 +1,46 @@
+{
+  "Event": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "cover_url": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "tickets_url": {
+      "type": "string"
+    }
+  },
+  "Pontuation": {
+    "event_id": {
+      "type": "integer",
+      "ref": "User",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "points": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
