@@ -29,6 +29,7 @@
     "@adonisjs/vow": "^1.0.17",
     "adonis-acl": "^1.1.1",
     "adonis-swagger": "^1.2.9",
+    "axios": "^0.19.2",
     "require-dir": "^1.2.0",
     "sqlite3": "^4.1.1"
   },

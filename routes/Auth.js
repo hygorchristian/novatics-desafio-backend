@@ -9,5 +9,5 @@ const Route = use('Route')
 |
 */
 
-Route.post('/auth', 'AuthController.store').validator('Auth')
+Route.post('/auth/github', 'AuthGithubController.store').validator('AuthGithub')
 Route.delete('/auth', 'AuthController.destroy').middleware(['auth'])
