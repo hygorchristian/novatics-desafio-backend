@@ -11,13 +11,14 @@ class EventController {
       order = 'ASC'
     } = request.get()
 
-    const query = Event.query().orderBy(sort, order)
+    const query = Event.query().with('pontuations').orderBy(sort, order)
     const events = await query.paginate(page, perPage)
     return events
   }
 
   async show ({ params }) {
     const event = await Event.findOrFail(params.id)
+    await event.load('pontuations')
     return event
   }
 

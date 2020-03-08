@@ -6,21 +6,11 @@ class UpdatePontuation {
   }
 
   get rules () {
-    return {
-      event_id: 'required',
-      title: 'required',
-      code: 'required',
-      points: 'required'
-    }
+    return { }
   }
 
   get messages () {
-    return {
-      'event_id.required': 'Você deve informar o campo event_id',
-      'title.required': 'Você deve informar o campo title',
-      'code.required': 'Você deve informar o campo code',
-      'points.required': 'Você deve informar o campo points'
-    }
+    return { }
   }
 }
 
