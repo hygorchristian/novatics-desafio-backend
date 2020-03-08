@@ -9,4 +9,5 @@ const Route = use('Route')
 |
 */
 
-Route.post('/points/add', 'PointController.store').validator('Point/CreatePoint').middleware(['auth'])
+Route.post('/users/:id/points', 'UserPointController.store').validator('Point/CreatePoint').middleware(['auth'])
+Route.get('/users/:id/points', 'UserPointController.show')
