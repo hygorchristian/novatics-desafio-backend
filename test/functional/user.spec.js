@@ -48,8 +48,6 @@ test('Get one user', async ({ client }) => {
     .get('/users/1')
     .end()
 
-  console.log(response)
-
   response.assertStatus(204)
 })
 
