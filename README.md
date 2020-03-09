@@ -1,16 +1,16 @@
-# VUTTR Back
+# Stars Deck Backend
 
 Desafio back-end Novatics para construir uma aplicação simples para gerenciar eventos e pontuações de usuários desenvolvido em  [Adonis JS](https://adonisjs.com/).
 
 ## :book: Sumário
 
-- [Dependências]()
-- [Guia de instalação]()
-  - [Como instalar]()
-  - [Executando a aplicação]()
-- [Documentação]()
-- [Conteinerização (Docker)]()
-  - [Comandos Docker]()
+- [Dependências](https://github.com/hygorchristian/novatics-desafio-backend#gear-depend%C3%AAncias)
+- [Guia de instalação](https://github.com/hygorchristian/novatics-desafio-backend#rocket-guia-de-instala%C3%A7%C3%A3o)
+  - [Como instalar](https://github.com/hygorchristian/novatics-desafio-backend#como-instalar)
+  - [Executando a aplicação](https://github.com/hygorchristian/novatics-desafio-backend#executando-a-aplica%C3%A7%C3%A3o)
+- [Documentação](https://github.com/hygorchristian/novatics-desafio-backend#open_book-documenta%C3%A7%C3%A3o-swagger)
+- [Conteinerização (Docker)](https://github.com/hygorchristian/novatics-desafio-backend#whale2-conteineriza%C3%A7%C3%A3o-docker)
+  - [Comandos Docker](https://github.com/hygorchristian/novatics-desafio-backend#comandos-docker)
 
 ## :gear: Dependências
 
