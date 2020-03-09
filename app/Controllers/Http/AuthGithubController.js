@@ -9,10 +9,25 @@ class AuthController {
     const user = await User.findBy('username', username)
 
     if (user) { // User exists
+      await user.load('points')
       const token = await auth.generate(user)
       user.token = token.token
 
-      return user
+      const json = user.toJSON()
+
+      let points_count = 0
+
+      const events = {}
+
+      for (const point of json.points) {
+        points_count += point.points
+        events[point.event_id] = true
+      }
+
+      json.points_count = points_count
+      json.events_count = Object.keys(events).length
+
+      return json
     } else { // User don't exist, so create a new one
       try {
         const gitResponse = await axios.get(`https://api.github.com/users/${username}`)

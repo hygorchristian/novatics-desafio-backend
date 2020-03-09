@@ -22,6 +22,7 @@ class User extends Model {
     return this
       .belongsToMany('App/Models/Pontuation')
       .pivotTable('user_points')
+      .withPivot(['created_at'])
   }
 
   static get traits () {
